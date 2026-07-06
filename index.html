@@ -1,120 +1,391 @@
-<h1>LEBENSLAUF</h1>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lebenslauf — Danylo Verpeta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f5f0e8;
+    --bg-soft: #faf7f1;
+    --card: #ffffff;
+    --ink: #1f1e1c;
+    --muted: #6f6a61;
+    --accent: #c96f4a;
+    --accent-soft: #e8c7b5;
+    --line: #e5ddd0;
+    --radius: 20px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.65;
+    overflow-x: hidden;
+  }
 
-<br>
+  /* soft grain / gradient background */
+  .bg-wash {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(700px 400px at 85% -5%, rgba(201,111,74,.12), transparent 65%),
+      radial-gradient(600px 380px at -10% 30%, rgba(201,111,74,.08), transparent 60%),
+      radial-gradient(500px 350px at 60% 110%, rgba(120,100,80,.10), transparent 60%);
+    animation: drift 18s ease-in-out infinite alternate;
+  }
+  @keyframes drift {
+    from { transform: translateY(0); }
+    to   { transform: translateY(-30px); }
+  }
 
-<h2>PERSÖNLICHE DATEN</h2>
-<table style="width:100%; border-collapse: collapse;">
-  <tr>
-    <td style="width:30%; padding: 4px 0; font-weight: bold;">Vorname Nachname:</td>
-    <td style="width:70%; padding: 4px 0;"> Danylo Verpeta</td>
-  </tr>
-  <tr>
-    <td style="font-weight: bold; padding: 4px 0;">Wohnort:</td>
-    <td style="padding: 4px 0;">49074 Osnabrück</td>
-  </tr>
-  <tr>
-    <td style="font-weight: bold; padding: 4px 0;">Telefon:</td>
-    <td style="padding: 4px 0;"> +380 63 822 76 52 (auch per WhatsApp erreichbar)</td>
-  </tr>
-  <tr>
-    <td style="font-weight: bold; padding: 4px 0;">E-Mail:</td>
-    <td style="padding: 4px 0;">perkset280@gmail.com</td>
-  </tr>
-  <tr>
-    <td style="font-weight: bold; padding: 4px 0;">Geburtsdatum / -ort:</td>
-    <td style="padding: 4px 0;">27.08.2009 in Kosjatyn</td>
-  </tr>
-</table>
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 88px 28px 90px;
+  }
 
-<br>
+  /* hero */
+  .hero { margin-bottom: 72px; animation: rise .9s cubic-bezier(.22,1,.36,1) both; }
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .eyebrow {
+    display: inline-block;
+    font-size: .78rem;
+    font-weight: 600;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent-soft);
+    background: var(--bg-soft);
+    border-radius: 999px;
+    padding: 7px 16px;
+    margin-bottom: 26px;
+  }
+  .hero h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(2.6rem, 7vw, 4.2rem);
+    letter-spacing: -.02em;
+    line-height: 1.08;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+  .hero .subtitle {
+    margin-top: 18px;
+    font-size: 1.12rem;
+    color: var(--muted);
+    max-width: 540px;
+  }
+  .hero .tags { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 26px; }
+  .tag {
+    padding: 7px 16px;
+    border-radius: 999px;
+    font-size: .84rem;
+    font-weight: 500;
+    color: var(--ink);
+    background: var(--card);
+    border: 1px solid var(--line);
+    transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+  }
+  .tag:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent-soft);
+    box-shadow: 0 6px 18px rgba(120,90,60,.12);
+  }
 
-<h2>SCHULBILDUNG</h2>
-<table style="width:100%; border-collapse: collapse;">
-  <tr>
-    <td style="width:30%; padding: 6px 0; vertical-align: top; font-weight: bold;">seit 08/2026</td>
-    <td style="width:70%; padding: 6px 0; vertical-align: top;">
-      <strong>Berufsschulzentrum des Landkreises Osnabrück</strong><br>
-      Bildungsgang: TSI (Technik und Informatik)<br>
-      Angestrebter Abschluss: Fachhochschulreife / Praktikum im Bereich Softwareentwicklung
-    </td>
-  </tr>
-  <tr>
-    <td style="padding: 6px 0; vertical-align: top; font-weight: bold;">08/2025 – 06/2026</td>
-    <td style="padding: 6px 0; vertical-align: top;">
-      <strong>VSI-Kurs (Vorbereitung Schule und Integration)</strong><br>
-      Erfolgreicher Abschluss und Berufsorientierung
-    </td>
-  </tr>
-</table>
+  /* sections */
+  section {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 40px 42px;
+    margin-bottom: 26px;
+    box-shadow: 0 1px 2px rgba(60,50,40,.04);
+    opacity: 0;
+    transform: translateY(34px);
+    transition: opacity .8s cubic-bezier(.22,1,.36,1), transform .8s cubic-bezier(.22,1,.36,1),
+                box-shadow .35s ease;
+  }
+  section.visible { opacity: 1; transform: translateY(0); }
+  section:hover { box-shadow: 0 14px 44px rgba(90,70,50,.10); }
 
-<br>
+  h2 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 500;
+    font-size: 1.7rem;
+    letter-spacing: -.01em;
+    margin-bottom: 6px;
+  }
+  .section-lede {
+    color: var(--muted);
+    font-size: .95rem;
+    margin-bottom: 26px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--line);
+  }
 
-<h2>IT-KENNTNISSE & PROJEKTE</h2>
-<table style="width:100%; border-collapse: collapse;">
-  <tr>
-    <td style="width:30%; padding: 6px 0; vertical-align: top; font-weight: bold;">GitHub-Profil:</td>
-    <td style="width:70%; padding: 6px 0; vertical-align: top;">
-      <a href="https://github.com/perkgod-alt" style="color: #0066cc; text-decoration: none;">github.com/perkgod-alt</a>
-    </td>
-  </tr>
-  <tr>
-    <td style="width:30%; padding: 6px 0; vertical-align: top; font-weight: bold;">Programmiersprachen:</td>
-    <td style="width:70%; padding: 6px 0; vertical-align: top;">Python (Grundkenntnisse), SQL (Grundkenntnisse)</td>
-  </tr>
-  <tr>
-    <td style="font-weight: bold; padding: 6px 0; vertical-align: top;">Datenbanken:</td>
-    <td style="padding: 6px 0; vertical-align: top;">SQLite</td>
-  </tr>
-  <tr>
-    <td style="font-weight: bold; padding: 6px 0; vertical-align: top;">Eigene IT-Projekte:</td>
-    <td style="padding: 6px 0; vertical-align: top;">
-      <strong>Telegram-Bot Projekt (verfügbar auf GitHub)</strong><br>
-      • Konzeption und Entwicklung eines interaktiven Bots mit Python<br>
-      • Integration einer SQLite-Datenbank zur strukturierten Datenspeicherung<br>
-      • Praktische Anwendung von KI-gestützten Tools (AI-Pair-Programming) zur Code-Optimierung<br><br>
-      
-      <strong>Lagerbestands-Anwendung</strong><br>
-      • Erstellung eines Programms zur Verwaltung und Strukturierung von Inventardaten<br><br>
-      
-      <strong>Taschenrechner-App</strong><br>
-      • Programmierung einer funktionalen Kalkulations-Anwendung in Python
-    </td>
-  </tr>
-</table>
+  .row {
+    display: grid;
+    grid-template-columns: 210px 1fr;
+    gap: 6px 28px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .row:last-child { border-bottom: none; padding-bottom: 0; }
+  .row .label { font-weight: 600; color: var(--muted); font-size: .92rem; }
+  a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-soft); transition: border-color .2s, color .2s; }
+  a:hover { border-color: var(--accent); }
 
-<br>
+  /* timeline */
+  .timeline-item {
+    position: relative;
+    padding: 0 0 30px 32px;
+    border-left: 2px solid var(--line);
+  }
+  .timeline-item:last-child { padding-bottom: 4px; }
+  .timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -8px; top: 7px;
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 3px solid var(--bg-soft);
+    box-shadow: 0 0 0 1px var(--accent-soft);
+  }
+  .timeline-item .date {
+    font-size: .78rem; font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .timeline-item h3 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 500;
+    font-size: 1.18rem;
+    margin: 6px 0 4px;
+  }
+  .timeline-item p { color: var(--muted); font-size: .96rem; }
 
-<h2>SPRACHKENNTNISSE</h2>
-<table style="width:100%; border-collapse: collapse;">
-  <tr>
-    <td style="width:30%; padding: 4px 0; font-weight: bold;">Russisch:</td>
-    <td style="width:70%; padding: 4px 0;">Muttersprache (C1)</td>
-  </tr>
-  <tr>
-    <td style="font-weight: bold; padding: 4px 0;">Ukrainisch:</td>
-    <td style="padding: 4px 0;">Muttersprache (C2)</td>
-  </tr>
-  <tr>
-    <td style="font-weight: bold; padding: 4px 0;">Englisch:</td>
-    <td style="padding: 4px 0;">Gute Kenntnisse (B1/B2)</td>
-  </tr>
-  <tr>
-    <td style="font-weight: bold; padding: 4px 0;">Deutsch:</td>
-    <td style="padding: 4px 0;">Grundkenntnisse (A2, VSI-Kurs absolviert)</td>
-  </tr>
-</table>
+  /* projects */
+  .projects { display: grid; gap: 16px; margin-top: 24px; }
+  .project {
+    background: var(--bg-soft);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 24px 26px;
+    transition: transform .35s cubic-bezier(.22,1,.36,1), box-shadow .35s ease, border-color .35s ease;
+  }
+  .project:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-soft);
+    box-shadow: 0 12px 32px rgba(120,90,60,.12);
+  }
+  .project h3 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 500;
+    font-size: 1.12rem;
+    margin-bottom: 10px;
+  }
+  .project h3 .note { color: var(--muted); font-family: 'Inter', sans-serif; font-size: .82rem; font-weight: 400; }
+  .project ul { list-style: none; }
+  .project li {
+    color: var(--muted); font-size: .94rem;
+    padding-left: 20px; position: relative; margin-bottom: 5px;
+  }
+  .project li::before {
+    content: "";
+    position: absolute; left: 4px; top: .62em;
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--accent);
+  }
 
-<br>
+  /* language bars */
+  .lang { margin-bottom: 22px; }
+  .lang:last-child { margin-bottom: 0; }
+  .lang .top {
+    display: flex; justify-content: space-between; align-items: baseline;
+    font-size: .95rem; font-weight: 500; margin-bottom: 8px;
+  }
+  .lang .top span:last-child { color: var(--muted); font-size: .82rem; font-weight: 400; }
+  .bar {
+    height: 9px; border-radius: 99px;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    overflow: hidden;
+  }
+  .bar .fill {
+    height: 100%; width: 0;
+    border-radius: 99px;
+    background: linear-gradient(90deg, var(--accent-soft), var(--accent));
+    transition: width 1.4s cubic-bezier(.22,1,.36,1);
+  }
 
-<h2>INTERESSEN & ENGAGEMENT</h2>
-<table style="width:100%; border-collapse: collapse;">
-  <tr>
-    <td style="width:30%; padding: 4px 0; font-weight: bold;">Hobbys:</td>
-    <td style="width:70%; padding: 4px 0;">Basketball, spazieren, reisen</td>
-  </tr>
-</table>
+  .footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: .9rem;
+    margin-top: 48px;
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+    opacity: 0;
+    animation: rise .9s ease 1s both;
+  }
+  .footer::before {
+    content: "";
+    display: block;
+    width: 48px; height: 2px;
+    background: var(--accent-soft);
+    margin: 0 auto 18px;
+    border-radius: 2px;
+  }
 
-<br>
-<br>
+  @media (max-width: 620px) {
+    .row { grid-template-columns: 1fr; gap: 2px; }
+    section { padding: 28px 22px; }
+    .container { padding-top: 60px; }
+  }
+  @media print {
+    .bg-wash { display: none; }
+    section { opacity: 1 !important; transform: none !important; box-shadow: none; }
+    .fill { width: var(--w, 100%) !important; }
+  }
+</style>
+</head>
+<body>
 
-<p>Osnabrück, 06.07.2026</p>
+<div class="bg-wash"></div>
+
+<div class="container">
+
+  <header class="hero">
+    <span class="eyebrow">Lebenslauf</span>
+    <h1>Danylo <em>Verpeta</em></h1>
+    <p class="subtitle">Angehender Softwareentwickler aus Osnabrück — mit Leidenschaft für Python, Datenbanken und eigene IT-Projekte.</p>
+    <div class="tags">
+      <span class="tag">Python</span>
+      <span class="tag">SQL</span>
+      <span class="tag">SQLite</span>
+      <span class="tag">Telegram-Bots</span>
+      <span class="tag">AI-Pair-Programming</span>
+    </div>
+  </header>
+
+  <section>
+    <h2>Persönliche Daten</h2>
+    <p class="section-lede">Kontakt und allgemeine Angaben</p>
+    <div class="row"><div class="label">Vorname Nachname</div><div class="value">Danylo Verpeta</div></div>
+    <div class="row"><div class="label">Wohnort</div><div class="value">49074 Osnabrück</div></div>
+    <div class="row"><div class="label">Telefon</div><div class="value">+380 63 822 76 52 <span style="color:var(--muted)">(auch per WhatsApp erreichbar)</span></div></div>
+    <div class="row"><div class="label">E-Mail</div><div class="value"><a href="mailto:perkset280@gmail.com">perkset280@gmail.com</a></div></div>
+    <div class="row"><div class="label">Geburtsdatum / -ort</div><div class="value">27.08.2009 in Kosjatyn</div></div>
+  </section>
+
+  <section>
+    <h2>Schulbildung</h2>
+    <p class="section-lede">Bildungsweg und Abschlüsse</p>
+    <div class="timeline-item">
+      <div class="date">seit 08/2026</div>
+      <h3>Berufsschulzentrum des Landkreises Osnabrück</h3>
+      <p>Bildungsgang: TSI (Technik und Informatik)<br>
+      Angestrebter Abschluss: Fachhochschulreife / Praktikum im Bereich Softwareentwicklung</p>
+    </div>
+    <div class="timeline-item">
+      <div class="date">08/2025 – 06/2026</div>
+      <h3>VSI-Kurs (Vorbereitung Schule und Integration)</h3>
+      <p>Erfolgreicher Abschluss und Berufsorientierung</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>IT-Kenntnisse &amp; Projekte</h2>
+    <p class="section-lede">Technische Fähigkeiten und eigene Entwicklungen</p>
+    <div class="row"><div class="label">GitHub-Profil</div><div class="value"><a href="https://github.com/perkgod-alt" target="_blank" rel="noopener">github.com/perkgod-alt</a></div></div>
+    <div class="row"><div class="label">Programmiersprachen</div><div class="value">Python (Grundkenntnisse), SQL (Grundkenntnisse)</div></div>
+    <div class="row"><div class="label">Datenbanken</div><div class="value">SQLite</div></div>
+
+    <div class="projects">
+      <div class="project">
+        <h3>Telegram-Bot Projekt <span class="note">— verfügbar auf GitHub</span></h3>
+        <ul>
+          <li>Konzeption und Entwicklung eines interaktiven Bots mit Python</li>
+          <li>Integration einer SQLite-Datenbank zur strukturierten Datenspeicherung</li>
+          <li>Praktische Anwendung von KI-gestützten Tools (AI-Pair-Programming) zur Code-Optimierung</li>
+        </ul>
+      </div>
+      <div class="project">
+        <h3>Lagerbestands-Anwendung</h3>
+        <ul>
+          <li>Erstellung eines Programms zur Verwaltung und Strukturierung von Inventardaten</li>
+        </ul>
+      </div>
+      <div class="project">
+        <h3>Taschenrechner-App</h3>
+        <ul>
+          <li>Programmierung einer funktionalen Kalkulations-Anwendung in Python</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Sprachkenntnisse</h2>
+    <p class="section-lede">Sprachen und Niveaustufen</p>
+    <div class="lang">
+      <div class="top"><span>Ukrainisch</span><span>Muttersprache (C2)</span></div>
+      <div class="bar"><div class="fill" data-width="100%"></div></div>
+    </div>
+    <div class="lang">
+      <div class="top"><span>Russisch</span><span>Muttersprache (C1)</span></div>
+      <div class="bar"><div class="fill" data-width="92%"></div></div>
+    </div>
+    <div class="lang">
+      <div class="top"><span>Englisch</span><span>Gute Kenntnisse (B1/B2)</span></div>
+      <div class="bar"><div class="fill" data-width="65%"></div></div>
+    </div>
+    <div class="lang">
+      <div class="top"><span>Deutsch</span><span>Grundkenntnisse (A2, VSI-Kurs absolviert)</span></div>
+      <div class="bar"><div class="fill" data-width="40%"></div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Interessen &amp; Engagement</h2>
+    <p class="section-lede">Freizeit und persönliche Interessen</p>
+    <div class="row"><div class="label">Hobbys</div><div class="value">Basketball, Spazieren, Reisen</div></div>
+  </section>
+
+  <p class="footer">Osnabrück, 06.07.2026</p>
+
+</div>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      entry.target.querySelectorAll('.fill').forEach(f => {
+        f.style.width = f.dataset.width;
+      });
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('section').forEach(s => observer.observe(s));
+</script>
+
+</body>
+</html>
